@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
       <!-- Style -->
-      {% load staticfiles %}
-    <link href="{% static 'recommender_app/css/style.css' %}" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -24,7 +23,7 @@
                 </div>
                 <div class="col-md-10 col-lg-8">
                     <form action="" id="search" method="post">
-                        {% csrf_token %}
+
                     <input type="search" class="form-control-lgc" placeholder="Who's your favorite artist?"
                            response-url="{% url 'predictartist' %}" id="inputartist">
                     <button class="btn btn-dark" id="submit">Go!</button>
