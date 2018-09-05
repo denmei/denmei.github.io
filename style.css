@@ -1,0 +1,26 @@
+#main {
+    height: 100vh;
+    text-align: center;
+}
+
+#main-content {
+    position: relative;
+    top: 40%;
+    transform: translateY(-40%);
+    text-align: center;
+}
+
+#main h1 {
+    font-size: 8vw;
+}
+
+#main {
+    background: url(../images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#search {
+    margin: 50px;
+}
