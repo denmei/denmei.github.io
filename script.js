@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+    let artists = ["die Ärzte"];
+
+    $("#inputartist").autocomplete({
+      source: artists
+    });
+
     $("#submit").click(function(event) {
 
         event.preventDefault();
