@@ -1,10 +1,35 @@
 $(document).ready(function() {
 
-    let artists = ["die Ärzte"];
+    // let artistLink = "https://ml-server-dm.herokuapp.com/music_recommender/api/artist_list";
+    // let recommenderLink = "https://ml-server-dm.herokuapp.com/music_recommender/api/artist_recommendation";
 
-    $("#inputartist").autocomplete({
-      source: artists
-    });
+    let artistLink = "http://127.0.0.1:8000/music_recommender/api/artist_list";
+    let recommenderLink = "http://127.0.0.1:8000/music_recommender/api/artist_recommendation";
+
+    $.ajax({
+            url: artistLink,
+            // dataType: 'application/json',
+            type: 'GET',
+            contentType: 'application/json',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            success: function(response) {
+                    let artists = [];
+                    for (entry in response) {
+                      artists.push(response[entry].name);
+                    }
+                    console.log(artists);
+
+                    $("#inputartist").autocomplete({
+                      source: artists
+                    });
+                },
+            error: function(xhr, status, error) {
+                    console.log("error in artists");
+                }
+         });
 
     $("#submit").click(function(event) {
 
@@ -12,7 +37,7 @@ $(document).ready(function() {
 
         let artistinput = $("#inputartist");
         let uInput = artistinput.val();
-        let predictUrl = artistinput.attr("response-url");
+        let predictUrl = recommenderLink;
         console.log("clicked");
         $.ajax({
                 url: predictUrl,

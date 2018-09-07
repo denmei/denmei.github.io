@@ -30,12 +30,11 @@
     position: relative;
     list-style: none;
     background-color: white;
-    border-radius: 18px;
     z-index:10;
     box-shadow: 5px 0px 8px white;
     width: 214px;
-    line-height: 200%;
-    font-size: 18px;
+    line-height: 100%;
+    font-size: 1em;
     padding: 15px 0;
     border: solid 1px grey;
 
@@ -45,4 +44,6 @@
     margin: none;
     padding-left: 15px;
     padding-right:10px;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
 }
