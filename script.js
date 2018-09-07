@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-    // let artistLink = "https://ml-server-dm.herokuapp.com/music_recommender/api/artist_list";
-    // let recommenderLink = "https://ml-server-dm.herokuapp.com/music_recommender/api/artist_recommendation";
+    let artistLink = "https://ml-server-dm.herokuapp.com/music_recommender/api/artist_list";
+    let recommenderLink = "https://ml-server-dm.herokuapp.com/music_recommender/api/artist_recommendation";
 
-    let artistLink = "http://127.0.0.1:8000/music_recommender/api/artist_list";
-    let recommenderLink = "http://127.0.0.1:8000/music_recommender/api/artist_recommendation";
+    // let artistLink = "http://127.0.0.1:8000/music_recommender/api/artist_list";
+    // let recommenderLink = "http://127.0.0.1:8000/music_recommender/api/artist_recommendation";
 
     $.ajax({
             url: artistLink,
