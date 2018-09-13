@@ -8,6 +8,7 @@
       <!-- Style -->
     <link href="/style.css" rel="stylesheet">
     <!-- <link href="/Users/dm/Documents/denmei.github.io/style.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -25,9 +26,11 @@
                 <div class="col-md-10 col-lg-8">
                     <form action="" id="search" method="post">
 
-                    <input type="search" class="form-control-lgc" placeholder="Who's your favorite artist?"
-                           response-url="{% url 'predictartist' %}" id="inputartist">
-                    <button class="btn btn-dark" id="submit">Go!</button>
+                    <input type="search" class="form-control-lgc" placeholder="Wait, server is waking up..."
+                           response-url="{% url 'predictartist' %}" id="inputartist" disabled>
+                    <button class="btn btn-dark buttonload" id="submit">
+                      Go!
+                    </button>
                 </form>
                 </div>
                 <div class="col-md-1 col-lg-2">

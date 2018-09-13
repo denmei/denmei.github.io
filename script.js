@@ -20,11 +20,12 @@ $(document).ready(function() {
                     for (entry in response) {
                       artists.push(response[entry].name);
                     }
-                    console.log(artists);
 
                     $("#inputartist").autocomplete({
                       source: artists
                     });
+                    document.getElementById("inputartist").value = "Who's your favorite artist?";
+                    document.getElementById("inputartist").disabled = false;
                 },
             error: function(xhr, status, error) {
                     console.log("error in artists");
@@ -49,6 +50,9 @@ $(document).ready(function() {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
+                beforeSend: function(){
+                    document.getElementById("submit").innerHTML = '<i class="fa fa-spinner fa-spin"></i>';
+                },
                 success: function(response) {
                         document.getElementById("recommendations-list").innerHTML = "";
                         let recommendations = response.recommendations;
@@ -58,9 +62,11 @@ $(document).ready(function() {
                             let nameList = "<li class=\"list-group-item\">" + name + "</li>";
                             document.getElementById("recommendations-list").innerHTML += nameList;
                         }
+                        document.getElementById("submit").innerHTML = "Go!";
                     },
                 error: function(xhr, status, error) {
                         document.getElementById("recommendations-list").innerHTML = "";
+                        document.getElementById("submit").innerHTML = "Go!";
                     }
              });
     });
