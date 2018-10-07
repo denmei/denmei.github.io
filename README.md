@@ -1,2 +1,2 @@
 My github-site.
-Check out at [github-link](www.denmei.github.io).
+Check out [here](https://denmei.github.io/).
