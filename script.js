@@ -65,6 +65,7 @@ $(document).ready(function() {
                         document.getElementById("submit").innerHTML = "Go!";
                     },
                 error: function(xhr, status, error) {
+                        console.log(error);
                         document.getElementById("recommendations-list").innerHTML = "";
                         document.getElementById("submit").innerHTML = "Go!";
                     }
