@@ -43,8 +43,8 @@ $(document).ready(function() {
         $.ajax({
                 url: predictUrl,
                 // dataType: 'application/json',
-                type: 'POST',
-                data: JSON.stringify({artist: uInput, number: 5}),
+                type: 'GET',
+                data: 'artist=' + uInput + '&number=' + 5,
                 contentType: 'application/json',
                 headers: {
                     'Accept': 'application/json',
